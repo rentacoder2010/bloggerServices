@@ -47,8 +47,8 @@ async function postToBlogger(title, contentHtml) {
 
 // Endpoint: GET /post-blog?title=...&content=...
 app.post('/post-blog', async (req, res) => {
-  const { title, content } = req.query;
-  console.log('Received request to post blog:', req.query);
+  const { title, content } = req.body;
+  console.log('Received request to post blog:', req.body);
   if (!title || !content) {
     return res.status(400).json({ error: 'title and content are required' });
   }
