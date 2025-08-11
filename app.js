@@ -46,7 +46,7 @@ async function postToBlogger(title, contentHtml) {
 }
 
 // Endpoint: GET /post-blog?title=...&content=...
-app.get('/post-blog', async (req, res) => {
+app.post('/post-blog', async (req, res) => {
   const { title, content } = req.query;
   console.log('Received request to post blog:', req.query);
   if (!title || !content) {
