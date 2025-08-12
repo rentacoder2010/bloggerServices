@@ -9,9 +9,9 @@ app.use(express.json());
 async function getAccessToken() {
   const response = await axios.post('https://oauth2.googleapis.com/token', null, {
     params: {
-      client_id: process.env.CLIENT_ID,
-      client_secret: process.env.CLIENT_SECRET,
-      refresh_token: process.env.REFRESH_TOKEN,
+      client_id: "1003232675090-vsol82rj6vca3995isq3srlpkcif3mge.apps.googleusercontent.com",
+      client_secret: "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",
+      refresh_token: "1//04FMik5XPfatJCgYIARAAGAQSNwF-L9Ir22KW8evh8CCwSTsXXkEvDml1rnBB5FxLLrvVm4fK-hcgO_oAY5evKo4uYLlEf1A9Yqg",
       grant_type: 'refresh_token',
     },
     headers: {
