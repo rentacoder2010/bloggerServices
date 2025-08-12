@@ -65,5 +65,5 @@ app.post('/post-blog', async (req, res) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✅ Blogger API server running at http://localhost:\${PORT}`);
+  console.log(`✅ Blogger API server running at http://localhost:${PORT}`);
 });
