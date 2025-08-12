@@ -25,7 +25,7 @@ async function getAccessToken() {
 // STEP 2: Blogger POST Insert
 async function postToBlogger(title, contentHtml) {
   const accessToken = await getAccessToken();
-  const url = `https://www.googleapis.com/blogger/v3/blogs/\${process.env.BLOG_ID}/posts/`;
+  const url = `blogger.googleapis.com/v3/blogs/${process.env.BLOG_ID}/posts`;
 
   const response = await axios.post(
     url,
@@ -65,5 +65,5 @@ app.post('/post-blog', async (req, res) => {
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`✅ Blogger API server running at http://localhost:${PORT}`);
+  console.log(`✅ Blogger API server running at http://localhost:\${PORT}`);
 });
