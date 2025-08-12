@@ -25,7 +25,7 @@ async function getAccessToken() {
 // STEP 2: Blogger POST Insert
 async function postToBlogger(title, contentHtml) {
   const accessToken = await getAccessToken();
-  const url = `blogger.googleapis.com/v3/blogs/${process.env.BLOG_ID}/posts`;
+  const url = `https://blogger.googleapis.com/v3/blogs/${process.env.BLOG_ID}/posts`;
 
   const response = await axios.post(
     url,
